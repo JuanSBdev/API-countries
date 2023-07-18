@@ -6,21 +6,26 @@ let getCountries = async (req, res)=>{
 try {
    const response = await axios.get(URL)
    const data = response.data;
+   for(let i = 0; i < data.length; i++){
+       const country = data[i];
 
-   let id = data.tld ? (data.tld.length > 0 ? data.tld[0] : undefined) : 777;
-      console.log(id)
-//     let pais = {
-//         id: data.tld,
-//         nombre: data.name,
-//         bandera: data.flags,
-//         continente: data.continents,
-//         capital: data.capital,
-//         subregion: data.subregion,
-//         poblacion:data.population,
+       const capital = country.capital ? country.capital[0] : 'No encontró'; 
+        let subregion = country.subregion ? country.subregion : 'no existe';
+        let continente = country.continents ? country.continents[0] : 'no existe';
 
-//     }
-//     let paises =  await Country.create(pais)
-//    res.status(201).json(paises)
+       console.log(continente)
+        const pais = {
+            id: country.cca3,
+            nombre: country.name.common,
+            bandera: country.flags.png,
+            continente: continente,
+            capital: capital,
+            subregion: subregion,
+            poblacion: country.population,
+          };
+          let paises =  await Country.create(pais)
+        }
+        res.status(201).json({ message: 'paises creados'})
    
 } catch (error) {
     res.status(400).json({error: error.message})
