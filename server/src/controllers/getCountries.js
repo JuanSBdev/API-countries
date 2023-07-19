@@ -13,7 +13,6 @@ try {
         let subregion = country.subregion ? country.subregion : 'no existe';
         let continente = country.continents ? country.continents[0] : 'no existe';
 
-       console.log(continente)
         const pais = {
             id: country.cca3,
             nombre: country.name.common,
