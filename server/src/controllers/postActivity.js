@@ -17,8 +17,7 @@ const postActivity = async (req, res)=>{
             duracion,
             temporada
         }
-        let nuevaActividad = await Activity.create(actividad,
-            {include: Country})
+        let nuevaActividad = await Activity.create(actividad)
             
         let countryFound = await Country.findByPk(countryId)
             // console.log(countryFound)

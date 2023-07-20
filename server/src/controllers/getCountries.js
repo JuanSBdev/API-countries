@@ -25,8 +25,7 @@ try {
         
 
           let paises =  await Country.create(
-            pais,
-            {include: Activity})
+            pais)
         }
         res.status(201).json({ message: 'paises creados'})
    
