@@ -17,6 +17,18 @@ export const addCountry = (name)=>{
         }        
     }
 }
+export const delCountry = (id)=>{
+    return async (dispatch) =>{
+        try {
+            dispatch({
+                type: DEL_COU,
+                payload: id
+            })
+        } catch (error) {
+            console.log(error)
+        }        
+    }
+}
 
 
   

@@ -12,6 +12,13 @@ const reducer = (state = initialState, action)=>{
                 ...state,
                     paises: [...state.paises, action.payload]
             }
+        case DEL_COU:
+            let paisesFilter = state.paises.filter(p => p.id !== Number(action.payload))
+            return{
+                ...state,
+                paises:[...state.paises, paisesFilter]
+            }
+
             default:
             return {...state}
     }
