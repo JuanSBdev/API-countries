@@ -7,7 +7,7 @@ let getCountryName = async (req, res) =>{
         const pais = await Country.findOne({
             where: {
                 nombre: {
-                    [Op.iLike]: name,
+                    [Op.iLike]: `%${name}%`,
                        },
             },
             include: Activity,
