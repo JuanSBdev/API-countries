@@ -1,22 +1,26 @@
 .wrapper{
-    width: 100%;
+    width: 20%;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
+    flex-flow: column wrap;
+    background-color: aquamarine;
 }
 .divLogo{
-    width: 100%;
-    display: flex;
-    justify-content: start;
-}
-.imgLogo{
-    width: 20%;
-}
-.divInput{
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+}
+.imgLogo{
+    width:50%;
+    margin-bottom: 5%;
+}
+.p{
+    display: flex;
+    justify-content: start;
+    margin-left: 10%;
+}
+.divInput{
+    display: flex;
+
 }
 .inputText{
     border-radius: 1rem;
@@ -24,5 +28,4 @@
 }
 .divInput img {
 width: 10%;
-margin: 4%;
 }

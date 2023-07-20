@@ -21,6 +21,7 @@ export default function NavBar() {
             <img className={styles.imgLogo}
             src={logoWorld} alt="" />
         </div>
+            <p className={styles.p}>buscar país</p>
         <div className={styles.divInput}>
             <input onChange={handleInput}
              type="text"
