@@ -1,4 +1,4 @@
-import { GET_COU, ADD_COU, DEL_COU, CREATE_ACT, GET_ACT } from "./action_types";
+import { GET_COU, ADD_COU, DEL_COU, CRE_ACT, GET_ACT } from "./action_types";
 
 const initialState = {
     paises:[],
@@ -18,7 +18,12 @@ const reducer = (state = initialState, action)=>{
                 ...state,
                 paises:[...state.paises, paisesFilter]
             }
-
+        case CRE_ACT:
+            return {
+                ...state,
+                    actividades: [...state.actividades, action.payload]
+            
+            }
             default:
             return {...state}
     }
