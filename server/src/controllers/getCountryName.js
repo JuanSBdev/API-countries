@@ -1,8 +1,7 @@
 const { Country, Activity,  } = require('../db.js');
 const { Op } = require('sequelize')
 let getCountryName = async (req, res) =>{
-    let { name } = req.params
-    console.log(name)
+    let name = req.query.name;    console.log(name)
     try {
         const pais = await Country.findOne({
             where: {
