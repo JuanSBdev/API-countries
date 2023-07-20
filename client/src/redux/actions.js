@@ -1,10 +1,10 @@
-import { GET_COU, ADD_COU, DEL_COU, CREATE_ACT, GET_ACT } from "./action_types";
+import axios from 'axios'
+import { ADD_COU } from "./action_types";
 
-import axios from ('axios')
 
-export const getCountry = (name)=>{
+export const addCountry = (name)=>{
     return async (dispatch) =>{
-        let endpoint =`http://localhost:3001/country/${name}`
+        let endpoint =`http://localhost:3001/countries?name=${name}`
         try {
             const response = await axios(endpoint)
             let data = response.data

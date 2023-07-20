@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import styles from './navBar.module.css'
+import { useDispatch } from 'react-redux';
+import { addCountry } from '../../redux/actions';
 
 let logoWorld = 'https://cdn-icons-png.flaticon.com/512/4974/4974772.png'
 let logoBuscar = 'https://www.seekpng.com/png/full/958-9588716_buscar-buscarlogo-buscador-lupalogo-lupa-search-icon-search.png'
 export default function NavBar() {
+    let dispatch = useDispatch()
+
     let [pais, setPais] = useState('')
 
     let handleInput = (e)=>{
@@ -11,7 +15,7 @@ export default function NavBar() {
         setPais(value)
     }
     let buscarPais = ()=>{
-
+        dispatch(addCountry(pais))
     }
 
     
