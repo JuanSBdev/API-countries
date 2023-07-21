@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ADD_COU, CRE_ACT } from "./action_types";
+import { ADD_COU, DEL_COU, CRE_ACT, GET_ACT } from "./action_types";
 
 
 export const addCountry = (name)=>{
@@ -44,6 +44,20 @@ export const createActivity = (activity)=>{
         }        
     }
 }
-
+export const getActivities = ()=>{
+    return async (dispatch) =>{
+        let endpoint =`http://localhost:3001/actividad`
+        try {
+            const response = await axios(endpoint)
+            let data = response.data
+            dispatch({
+                type: GET_ACT,
+                payload: data
+            })
+        } catch (error) {
+            console.log(error)
+        }        
+    }
+}
 
   

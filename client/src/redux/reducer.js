@@ -24,6 +24,11 @@ const reducer = (state = initialState, action)=>{
                     actividades: [...state.actividades, action.payload]
             
             }
+        case GET_ACT:
+            return{
+                ...state.actividades,
+
+            }
             default:
             return {...state}
     }
