@@ -5,7 +5,7 @@ export default function Cards() {
     let paises = useSelector(state => state.paises)
   return (
     <div>
-        {paises ? (
+        {paises ?  paises[0] && (
             paises.map((pais, index) =>(
                 <Card
                     key={index}

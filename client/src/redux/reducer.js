@@ -12,6 +12,24 @@ const reducer = (state = initialState, action)=>{
                 ...state,
                     paises: [...state.paises, action.payload]
             }
+        case GET_COU:
+            let paisFront = state.paises.find((pais)=> pais.nombre === action.payload.nombre)
+            if(paisFront){
+                console.log('Frontend')
+                alert('ya tienes este pais agregado')
+                return {
+                    ...state,
+                        paises:[...state.paises]
+                }
+            }
+            else{
+                console.log('BBDD')
+
+                return{
+                    ...state,
+                    paises: [...state.paises, action.payload]
+                }
+            }
         case DEL_COU:
             let paisesFilter = state.paises.filter(p => p.id !== Number(action.payload))
             return{

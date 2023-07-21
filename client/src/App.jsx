@@ -5,12 +5,14 @@ import './App.css'
 
 import React from 'react'
 import NavBar from './components/Nav/NavBar'
+import Cards from './components/Cards/Cards'
 
 export default function App() {
   return (
     <div>
       <NavBar></NavBar>
       <p>APP</p>
+      <Cards/>
     </div>
   )
 }
