@@ -11,7 +11,7 @@ export default function Cards() {
                     key={index}
                     id={pais.id}
                     name={pais.nombre}
-                    flag={pais.flag}
+                    flag={pais.bandera}
                     continent={pais.continente}
                     capital={pais.capital}
                     region={pais.region}
