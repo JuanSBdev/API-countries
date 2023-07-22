@@ -8,6 +8,8 @@ const initialState = {
 const reducer = (state = initialState, action)=>{
     switch(action.type){
         case ADD_COU:
+            console.log('soyaction')
+
             return{
                 ...state,
                     paises: [...state.paises, action.payload]
