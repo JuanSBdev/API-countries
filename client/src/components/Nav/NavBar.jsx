@@ -25,14 +25,14 @@ export default function NavBar() {
             <img className={styles.imgLogo}
             src={logoWorld} alt="" />
         </div>
-            <p className={styles.p}>buscar país</p>
         <div className={styles.divInput}>
-            <input onChange={handleInput}
-             type="text"
-             className={styles.inputText} />
-            <img src={logoBuscar}
-             alt="lupa"
-             onClick={buscarPais} />
+                <p className={styles.p}>buscar país</p>
+                <input onChange={handleInput}
+                 type="text"
+                 className={styles.inputText} />
+                <img src={logoBuscar} 
+                 alt="lupa"
+                 onClick={buscarPais} />
         </div>
     </div>
   )

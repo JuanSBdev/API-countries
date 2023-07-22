@@ -16,6 +16,7 @@ export default function App() {
     dispatch(getCountries())
     console.log('semanda')
   }, [])
+
   return (
     <div>
       <NavBar></NavBar>

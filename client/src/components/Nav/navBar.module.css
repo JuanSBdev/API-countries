@@ -1,31 +1,41 @@
 .wrapper{
-    width: 20%;
+    width: 100%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
     background-color: aquamarine;
+    height: 20%;
+    border-radius: 1rem;
 }
 .divLogo{
     display: flex;
+    width: 50%;
     justify-content: center;
 
 }
 .imgLogo{
-    width:50%;
+    width: 15%;
+    transform: scale(.9);
     margin-bottom: 5%;
 }
 .p{
-    display: flex;
-    justify-content: start;
     margin-left: 10%;
 }
 .divInput{
+    width: 50%;
     display: flex;
-
+    flex-flow: row nowrap;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
 }
 .inputText{
     border-radius: 1rem;
-    font-size: 1rem;
+    font-size: 2rem;
+    border: none;
+    margin-left: 2%;
 }
 .divInput img {
-width: 10%;
+width: 4%;
+padding: 2%;
 }
