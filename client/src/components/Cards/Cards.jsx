@@ -1,10 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Card from './Card';
+import styles from './Cards.module.css'
+
 export default function Cards() {
     let paises = useSelector(state => state.paises)
   return (
-    <div>
+    <div className={styles.wrapper}>
         {paises ?  paises[0] && (
             paises.map((pais, index) =>(
                 <Card

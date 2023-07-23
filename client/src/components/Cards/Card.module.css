@@ -2,10 +2,16 @@
     border-radius: 1rem;
     box-shadow: 0 0 10px 0;
     background: rgb(166,224,213);
-    background: linear-gradient(0deg, rgba(166,224,213,1) 0%, rgba(178,235,240,1) 48%);    width: 15%;
+    background: linear-gradient(0deg, rgba(166,224,213,1) 0%, rgba(178,235,240,1) 48%);
+    width: 15%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     margin: 2%;
+    max-height: 200px;
+    overflow: hidden;
+}
+.wrapper:hover{
+    transform: scale(1.1);
 }
 .separador{
     display: flex;
