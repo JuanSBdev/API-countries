@@ -14,7 +14,7 @@ export default function Cards() {
                     flag={pais.bandera}
                     continent={pais.continente}
                     capital={pais.capital}
-                    region={pais.region}
+                    area={pais.area}
                     subregion={pais.subregion}
                     population={pais.poblacion}
                 />
