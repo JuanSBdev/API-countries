@@ -20,7 +20,6 @@ export default function App() {
   return (
     <div>
       <NavBar></NavBar>
-      <p>APP</p>
       <Cards/>
     </div>
   )
