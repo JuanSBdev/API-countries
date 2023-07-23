@@ -20,7 +20,7 @@ module.exports = (sequelize) => {
     },
     continente:{
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
 
     },
     capital:{
@@ -30,8 +30,12 @@ module.exports = (sequelize) => {
     },
     subregion:{
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
 
+    },
+    area:{
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
     poblacion:{
       type: DataTypes.STRING,

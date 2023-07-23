@@ -2,11 +2,14 @@ import React from 'react'
 
 export default function Card(props) {
   let imgFlag = props.flag
-  console.log(imgFlag)
   return (
     <div>
         <h1>{props.name}</h1>
+        <h2>{props.capital}</h2>
         <img src={imgFlag} alt="flag" />
+        <p>{props.region}</p>
+        <p>{props.subregion}</p>
+        <p>{props.population}</p>
     </div>
   )
 }

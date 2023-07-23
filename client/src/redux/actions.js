@@ -24,6 +24,7 @@ export const getCountry = (name)=>{
         try {
             const response = await axios(endpoint)
             let data = response.data
+            console.log(data)
             dispatch({
                 type: GET_COU,
                 payload: data
