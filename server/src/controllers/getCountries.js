@@ -20,6 +20,7 @@ try {
             continente: continente,
             capital: capital,
             subregion: subregion,
+            area: country.area,
             poblacion: country.population,
           };
         
