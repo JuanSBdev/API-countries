@@ -9,7 +9,7 @@ export default function Card(props) {
           <h1 className={styles.h1_name}>{props.name}, {props.capital}</h1>
           <p className={styles.p_id}>#{props.id}</p>
         </div>
-        <img src={imgFlag} alt="flag" />
+        <img className={styles.img_flag} src={imgFlag} alt="flag" />
     </div>
   )
 }

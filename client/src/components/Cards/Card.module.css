@@ -1,5 +1,4 @@
 .wrapper{
-    border: 2px solid red;
     border-radius: 1rem;
     box-shadow: 0 0 10px 0;
     background: rgb(166,224,213);
@@ -11,6 +10,7 @@
 .separador{
     display: flex;
     justify-content: center;
+    margin-bottom: -10%;
 }
 .h1_name{
     display: flex;
@@ -23,7 +23,7 @@
     flex-flow: column nowrap;
 }
 
-img{
-    width: 90%;
-    padding: 5%;
+.img_flag{
+    width: 70%;
+    padding: 15%;
 }
