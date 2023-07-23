@@ -14,7 +14,7 @@ try {
                     continente: country.continents,
                     capital: country.capital ? country.capital[0] : 'None',
                     subregion: country.subregion,
-                    area: country.area,
+                    area: country.area ? country.area[0] : 'None',
                     poblacion: country.population,
                   }
 

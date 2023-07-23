@@ -8,7 +8,7 @@ export default function Cards() {
   return (
     <div className={styles.wrapper}>
         {paises ?  paises[0] && (
-            paises.map((pais, index) =>(
+            paises[0].map((pais, index) =>(
                 <Card
                     key={index}
                     id={pais.id}
