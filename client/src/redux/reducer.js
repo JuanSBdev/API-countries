@@ -9,29 +9,26 @@ const reducer = (state = initialState, action)=>{
     switch(action.type){
         case ADD_COU:
             console.log('soyaction')
-
+            let primerosPaises = action.payload.slice(0, 10) 
             return{
                 ...state,
-                    paises: [...state.paises, action.payload]
+                    paises: primerosPaises
             }
         case GET_COU:
-            let paisFront = state.paises.find((pais)=> pais.nombre === action.payload.nombre)
-            if(paisFront){
-                console.log('Frontend')
-                alert('ya tienes este pais agregado')
-                return {
-                    ...state,
-                        paises:[...state.paises]
-                }
-            }
-            else{
-                console.log('BBDD')
+         let encontrado = state.paises.find(country => country.id === action.payload.id)
+         if(encontrado){
+            alert('ya existe')
+            return{
+                paises:[ ...state.paises]
+               }
+         }
+         else{
 
-                return{
-                    ...state,
-                    paises: [...state.paises, action.payload]
+             return{
+                 paises: [...state.paises, action.payload]
                 }
             }
+          
         case DEL_COU:
             let paisesFilter = state.paises.filter(p => p.id !== Number(action.payload))
             return{

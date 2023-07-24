@@ -8,7 +8,7 @@ export default function Cards() {
   return (
     <div className={styles.wrapper}>
         {paises ?  paises[0] && (
-            paises[0].map((pais, index) =>(
+            paises.map((pais, index) =>(
                 <Card
                     key={index}
                     id={pais.id}
@@ -22,7 +22,20 @@ export default function Cards() {
                 />
             )
                 )
-        ):'no hay paises'}
+        ): paises.map((pais, index) =>(
+            <Card
+                key={index}
+                id={pais.id}
+                name={pais.nombre}
+                flag={pais.bandera}
+                continent={pais.continente}
+                capital={pais.capital}
+                area={pais.area}
+                subregion={pais.subregion}
+                population={pais.poblacion}
+            />
+        )
+            )}
     </div>
   )
 }
