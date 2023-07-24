@@ -34,18 +34,25 @@ export const getCountry = (name)=>{
         }        
     }
 }
-export const delCountry = (id)=>{
+
+
+export const delCountry = (id) => {
+    // const endpoint = `http://localhost:3001/country/${id}`
     return async (dispatch) =>{
-        try {
-            dispatch({
-                type: DEL_COU,
-                payload: id
-            })
-        } catch (error) {
-            console.log(error)
-        }        
+      try {
+        // await axios.delete(endpoint)
+        return dispatch({
+          type: DEL_COU,
+          payload: id,
+    });
+      } catch (error) {
+        console.log(error)
+      }
+
     }
-}
+  }
+
+
 export const createActivity = (activity)=>{
     return async (dispatch) =>{
         let endpoint =`http://localhost:3001/actividad`
