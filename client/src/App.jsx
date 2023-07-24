@@ -8,6 +8,7 @@ import NavBar from './components/Nav/NavBar'
 import Cards from './components/Cards/Cards'
 import { getCountries } from './redux/actions'
 import { useDispatch } from 'react-redux'
+import Filtros from './components/Filters/Filtros'
 
 export default function App() {
   let dispatch = useDispatch()
@@ -20,6 +21,7 @@ export default function App() {
   return (
     <div>
       <NavBar></NavBar>
+      <Filtros/>
       <Cards/>
     </div>
   )

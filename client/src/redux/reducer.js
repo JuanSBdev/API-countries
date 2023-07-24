@@ -1,11 +1,9 @@
-import { GET_COU, ADD_COU, DEL_COU, CRE_ACT, GET_ACT } from "./action_types";
+import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT } from "./action_types";
 
 const initialState = {
     base:[],
     paises:[],
-    deleted:[],
-    buscado:[],
-    continentes:[],
+    allContinents:[]
 }
 
 const reducer = (state = initialState, action)=>{
@@ -15,15 +13,14 @@ const reducer = (state = initialState, action)=>{
             return{
                 ...state,
                 paises: primerosPaises,
-                base: action.payload
+                base: action.payload,
+                allContinents: action.payload,
+                
             }
         case GET_COU:
          let encontrado = state.paises.find(country => country.id === action.payload.id)
          if(encontrado){
-            alert('ya existe')
-            return{
-                buscado:[ ...state.paises, encontrado]
-               }
+            alert('ALREADY IN YOUR LIST!')
          }
          else{
              return{
@@ -33,7 +30,6 @@ const reducer = (state = initialState, action)=>{
           
         case DEL_COU:
             let paisesFilter = state.paises.filter(p => p.id !== action.payload)
-            
             return{
                 ...state,
                 paises: paisesFilter,
@@ -48,6 +44,16 @@ const reducer = (state = initialState, action)=>{
             return{
                 ...state.actividades,
 
+            }
+
+        case BY_CONT:
+            const allContinents = state.allContinents;
+            const continentFilter = action.payload === 'All' ? allContinents :
+                allContinents.filter(i => i.continente === action.payload)
+           
+            return {
+                ...state,
+                paises: continentFilter
             }
             default:
             return {...state}
