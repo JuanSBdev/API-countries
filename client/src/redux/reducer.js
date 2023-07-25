@@ -20,11 +20,15 @@ const reducer = (state = initialState, action)=>{
         case GET_COU:
          let encontrado = state.paises.find(country => country.id === action.payload.id)
          if(encontrado){
-            alert('ALREADY IN YOUR LIST!')
+            alert('ALREADY IN this LIST!')
+            return{
+                ...state,
+               }
          }
          else{
              return{
-                 paises: [...state.paises, action.payload]
+                ...state,
+                 paises: action.payload
                 }
             }
           
@@ -48,9 +52,9 @@ const reducer = (state = initialState, action)=>{
 
         case BY_CONT:
             const allContinents = state.allContinents;
-            const continentFilter = action.payload === 'All' ? allContinents :
+            
+            const continentFilter = action.payload === 'All' ? state.base :
                 allContinents.filter(i => i.continente === action.payload)
-           
             return {
                 ...state,
                 paises: continentFilter
