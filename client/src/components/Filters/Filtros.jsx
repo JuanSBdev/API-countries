@@ -22,7 +22,7 @@ export default function Filtros() {
       <h2>Filtros</h2>
       <form onSubmit={handleSubmit}>
         <select value={selectedContinent} onChange={handleSelectChange}>
-          <option value="All">All</option>
+          <option value="All">My List</option>
           <option value="Africa">Africa</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>

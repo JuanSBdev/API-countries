@@ -22,7 +22,7 @@ export default function Cards() {
                 />
             )
                 )
-        ): paises.map((pais, index) =>(
+        ):(
             <Card
                 key={index}
                 id={pais.id}
@@ -35,7 +35,7 @@ export default function Cards() {
                 population={pais.poblacion}
             />
         )
-            )}
+            }
     </div>
   )
 }
