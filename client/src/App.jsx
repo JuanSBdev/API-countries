@@ -1,28 +1,28 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {  Routes, Route, Link, useLocation } from 'react-router-dom';
+
 import './App.css'
 
 import React from 'react'
 import NavBar from './components/Nav/NavBar'
 import Cards from './components/Cards/Cards'
 import { getCountries } from './redux/actions'
-import { useDispatch } from 'react-redux'
 import Filtros from './components/Filters/Filtros'
+import Start from '../views/Start/Start'
+import Inicio from '../views/inicio/Inicio';
 
 export default function App() {
-  let dispatch = useDispatch()
   
-  useEffect(()=>{
-    dispatch(getCountries())
-    console.log('semanda')
-  }, [])
 
   return (
     <div>
-      <NavBar></NavBar>
-      <Filtros/>
-      <Cards/>
+      <Routes>
+        <Route path='/' element={<Start/>}/>
+        <Route path='/countries' element={<Inicio/>}/>
+
+      </Routes>
+      
+      
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector} from 'react-redux'
 import Card from './Card';
 import styles from './Cards.module.css'
+import Filtros from '../Filters/Filtros';
 
 export default function Cards() {
     let paises = useSelector(state => state.paises)
