@@ -13,13 +13,16 @@ let deleteCountry = ()=>{
   return (
     <div className={styles.wrapper}>
         <div className={styles.separador}>
-        <button
-        onClick={deleteCountry}
-        >x</button>
-          <h1 className={styles.h1_name}>{props.name}, {props.capital}</h1>
+          <h1 className={styles.h1_name}>{props.name}</h1>
           <p className={styles.p_id}>#{props.id}</p>
+          <button
+          className={styles.btn_close}
+          onClick={deleteCountry}
+          >x</button>
         </div>
-        <img className={styles.img_flag} src={imgFlag} alt="flag" />
+        <div className={styles.img_container}>
+          <img className={styles.img_flag} src={imgFlag} alt="flag" />
+        </div>
     </div>
   )
 }
