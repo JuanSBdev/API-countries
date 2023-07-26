@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { filterContinents } from '../../redux/actions';
+import styles from './Filtros.module.css'
 
 export default function Filtros() {
   const dispatch = useDispatch();
   const [selectedContinent, setSelectedContinent] = useState('');
+  const [selectedOrder, setSelectedOrder] = useState('null')
 
   const handleSelectChange = (event) => {
     event.preventDefault();
@@ -17,11 +19,22 @@ export default function Filtros() {
     console.log(selectedContinent)
   };
 
+  const handleOrder = (e)=>{
+    e.preventDefault();
+    setSelectedOrder(e.target.value);
+  }
+  const submitOrder = (e)=>{
+    e.preventDefault();
+    console.log(selectedOrder)
+  }
   return (
-    <div>
-      <h2>Filtros</h2>
-      <form onSubmit={handleSubmit}>
-        <select value={selectedContinent} onChange={handleSelectChange}>
+    <div className={styles.wrapper}>
+      <p>Filtros</p>
+      <form
+        className={styles.formFilter}
+       onSubmit={handleSubmit}>
+        <select value={selectedContinent}
+         onChange={handleSelectChange}>
           <option value="All">My List</option>
           <option value="Africa">Africa</option>
           <option value="Europe">Europe</option>
@@ -32,6 +45,20 @@ export default function Filtros() {
         </select>
         <button type="submit">Filtrar</button>
       </form>
+
+      <form
+       onSubmit={submitOrder}
+        className={styles.formOrder}
+      >
+        <select value={selectedOrder} 
+        onChange={handleOrder}>
+          <option value="Alfabetico">A-Z</option>
+          <option value="Population">+Population</option>
+          <option value="Activities">With Activities</option>
+        </select>
+        <button type='submit' >Order</button>
+      </form>
+
     </div>
   );
 }

@@ -23,8 +23,15 @@ try {
    let paises = await Country.bulkCreate(pais)
    res.status(200).json(paises)
 
-} catch (error) {
-    res.status(400).json({error: error.message})
+}  catch (error) {
+    if (error.message === "llave duplicada viola restricción de unicidad «Countries_pkey»" ) {
+        let countries = await Country.findAll()
+        res.status(200).json(countries)
+
+    } else {
+        
+        res.status(400).json({error: error.message})
+    }
 }
 }
 module.exports = getCountries;
