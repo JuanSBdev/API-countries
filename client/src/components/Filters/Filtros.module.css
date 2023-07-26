@@ -1,10 +1,11 @@
 .wrapper{
 display: flex;
-flex-flow: row nowrap;
+flex-flow: row wrap;
 justify-content: center;
 padding: 2%;
 }
 .formFilter{
+    width:15%;
     border-radius: 1rem;
     border: none;
     margin: 1%;
@@ -12,8 +13,11 @@ padding: 2%;
 .formFilter button{
     border-radius: 1rem;
     border: none;
+    margin: 1%;
+    
 }
 .formOrder{
+    width: 15%;
     border-radius: 1rem;
     border: none;
     margin: 1%;
@@ -21,6 +25,7 @@ padding: 2%;
 .formOrder button{
     border-radius: 1rem;
     border: none;
+    margin: 1%;
 }
 .selectFilter {
     border-radius: 1rem;

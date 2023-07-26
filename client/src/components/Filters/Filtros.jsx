@@ -5,8 +5,8 @@ import styles from './Filtros.module.css'
 
 export default function Filtros() {
   const dispatch = useDispatch();
-  const [selectedContinent, setSelectedContinent] = useState('');
-  const [selectedOrder, setSelectedOrder] = useState('null')
+  const [selectedContinent, setSelectedContinent] = useState('All');
+  const [selectedOrder, setSelectedOrder] = useState('Alfabetico')
 
   const handleSelectChange = (event) => {
     event.preventDefault();
@@ -44,7 +44,7 @@ export default function Filtros() {
           <option value="South America">South America</option>
           <option value="North America">North America</option>
         </select>
-        <button type="submit">Filtrar</button>
+        <button type="submit">Filter</button>
       </form>
 
       <form
