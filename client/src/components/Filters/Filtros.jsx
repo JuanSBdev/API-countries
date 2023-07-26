@@ -29,11 +29,12 @@ export default function Filtros() {
   }
   return (
     <div className={styles.wrapper}>
-      <p>Filtros</p>
       <form
         className={styles.formFilter}
        onSubmit={handleSubmit}>
-        <select value={selectedContinent}
+        <select 
+          className={styles.selectFilter}
+        value={selectedContinent}
          onChange={handleSelectChange}>
           <option value="All">My List</option>
           <option value="Africa">Africa</option>
@@ -51,7 +52,8 @@ export default function Filtros() {
         className={styles.formOrder}
       >
         <select value={selectedOrder} 
-        onChange={handleOrder}>
+        onChange={handleOrder}
+        className={styles.selectOrder}>
           <option value="Alfabetico">A-Z</option>
           <option value="Population">+Population</option>
           <option value="Activities">With Activities</option>

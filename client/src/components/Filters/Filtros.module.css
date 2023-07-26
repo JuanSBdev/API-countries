@@ -1,11 +1,33 @@
 .wrapper{
 display: flex;
-flex-flow: column nowrap;
+flex-flow: row nowrap;
+justify-content: center;
+padding: 2%;
 }
 .formFilter{
-    color: red;
+    border-radius: 1rem;
+    border: none;
+    margin: 1%;
+}
+.formFilter button{
+    border-radius: 1rem;
+    border: none;
 }
 .formOrder{
-    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    margin: 1%;
+}
+.formOrder button{
+    border-radius: 1rem;
+    border: none;
+}
+.selectFilter {
+    border-radius: 1rem;
+    border: none;
+}
+.selectOrder{
+    border-radius: 1rem;
+    border: none;
 
 }
