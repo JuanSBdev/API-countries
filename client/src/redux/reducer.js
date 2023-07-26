@@ -1,4 +1,4 @@
-import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT } from "./action_types";
+import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY } from "./action_types";
 
 const initialState = {
     base:[],
@@ -58,8 +58,27 @@ const reducer = (state = initialState, action)=>{
                 ...state,
                 paises: continentFilter
             }
+        case ORDER_BY:
+           switch(action.payload){
+            case 'Alfabetico':
+                const orderByAlphabetic = [...state.paises].sort((a, b) => a.nombre.localeCompare(b.nombre));
+                return {
+                  ...state,
+                  paises: orderByAlphabetic
+                };
+            case 'Population':
+                const orderByPopulation = [...state.paises].sort((a, b) => b.poblacion - a.poblacion);
+                return {
+                  ...state,
+                  paises: orderByPopulation
+                };
+                default:
+                    return { ...state
+                    };
+                }
+        
             default:
             return {...state}
-    }
+        }
 }
 export default reducer;

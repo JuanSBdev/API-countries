@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { filterContinents } from '../../redux/actions';
+import { filterContinents, orderBy } from '../../redux/actions';
 import styles from './Filtros.module.css'
 
 export default function Filtros() {
@@ -25,6 +25,7 @@ export default function Filtros() {
   }
   const submitOrder = (e)=>{
     e.preventDefault();
+    dispatch(orderBy(selectedOrder))
     console.log(selectedOrder)
   }
   return (

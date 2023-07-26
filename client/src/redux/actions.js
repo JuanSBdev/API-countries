@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT } from "./action_types";
+import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY } from "./action_types";
 
 
 export const getCountries = ()=>{
@@ -52,20 +52,7 @@ export const delCountry = (id) => {
     }
   }
 
-export const filterContinents = (name)=>{
-    return  async (dispatch)=>{
-        try {
-            return dispatch({
-                type: BY_CONT,
-                payload: name,
-            });
-        } catch (error) {
-            console.log(error)
 
-        }
-    }
-} 
-  
   
   
 
@@ -100,4 +87,29 @@ export const getActivities = ()=>{
     }
 }
 
-  
+export const filterContinents = (name)=>{
+    return  async (dispatch)=>{
+        try {
+            return dispatch({
+                type: BY_CONT,
+                payload: name,
+            });
+        } catch (error) {
+            console.log(error)
+
+        }
+    }
+} 
+
+export const orderBy = (name)=>{
+    return async  (dispatch)=>{
+        try {
+            return dispatch({
+              type: ORDER_BY,
+              payload: name   
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+}
