@@ -4,20 +4,48 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30%;
-    background-image: url('https://cdn.worlddata.info/pics/map-world.png');
+    padding-bottom: 15%;
     
+    
+    
+}
+.separador{
+    box-shadow: 0 0 10px 1px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 2%;
+    padding-bottom: 8%;
+    padding-top: 5%;
+    margin: 5%;
+
+    background-image: url('https://www.smallworldfs.com/assets/www/images/payout-network/network-img-world-map@3x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid rgba(116, 65, 227, 0.763);
+    border-radius: 1rem;
+    background-color: rgb(155, 138, 231);
 }
 .h1_start{
     font-size: 3rem;
     margin-top: 10%;
+    margin-bottom: 40%;
+    color: aliceblue;
 }
 .btn_start{
     font-size: 1rem;
     border-radius: 1rem;
     border: none;
+    text-decoration: none;
     box-shadow: 0 0 10px 0;
-    padding: 100%;
+    width: 50%;
+    padding: 2%;
+    text-align: center;
+}
+.btn_start:active{
+    border: none;
+    color: rgb(26, 26, 114);
+    box-shadow: 0 0 5px 0;
 }
 .p_start{
     position: absolute;
