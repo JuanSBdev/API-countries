@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getDetail } from '../../src/redux/actions';
 import styles from './Detail.module.css'
 
@@ -36,15 +36,13 @@ export default function Detail() {
 
     )
     )}
-
+      <div>
+        <Link to={'/countries'}
+         className={styles.regresar}>
+          <img src="https://cdn-icons-png.flaticon.com/512/318/318493.png?w=360" alt="" />
+          <h4>BACK</h4>
+        </Link>
+      </div>
     </div>
   )
 }
-// ID (Código de tres letras).
-// Nombre.
-// Imagen de la bandera.
-// Continente.
-// Capital.
-// Subregión (si tiene).
-// Área (si tiene).
-// Población.

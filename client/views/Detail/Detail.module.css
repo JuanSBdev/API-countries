@@ -1,7 +1,9 @@
 .wrapper_top{
     width: 100%;
     display: flex;
+    flex-flow: column;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -12,7 +14,7 @@
     justify-content: space-evenly;
     border-radius: 1rem;
     box-shadow: 0 0px 2px 0;
-    border: 10px solid white;
+    border: 10px solid rgb(255, 255, 255);
     border-radius: 2rem;
     background: rgb(243, 189, 250);
 }
@@ -53,4 +55,20 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+.regresar{
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.regresar:hover{
+    transform: scale(1.1);
+}
+.regresar img{
+    width: 20%;
 }
