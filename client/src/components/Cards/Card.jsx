@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './Card.module.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { delCountry } from '../../redux/actions'
+import { delCountry, getDetail } from '../../redux/actions'
+import { Link } from 'react-router-dom'
 
 export default function Card(props) {
   let dispatch = useDispatch()
@@ -10,6 +11,7 @@ export default function Card(props) {
 let deleteCountry = ()=>{
   dispatch(delCountry(props.id))
 }
+
   return (
     <div className={styles.wrapper}>
         <div className={styles.separador}>
@@ -21,7 +23,12 @@ let deleteCountry = ()=>{
           >x</button>
         </div>
         <div className={styles.img_container}>
+        <Link to={`/country/${props.id}`}
+        >
           <img className={styles.img_flag} src={imgFlag} alt="flag" />
+
+        </Link>
+
         </div>
     </div>
   )

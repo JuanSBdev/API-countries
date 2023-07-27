@@ -1,10 +1,11 @@
-import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY } from "./action_types";
+import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY, GET_DET } from "./action_types";
 
 const initialState = {
     base:[],
     paises:[],
     allContinents:[],
     primeros:[],
+    detail:[]
 }
 
 const reducer = (state = initialState, action)=>{
@@ -76,6 +77,12 @@ const reducer = (state = initialState, action)=>{
                 default:
                     return { ...state
                     };
+                }
+            case GET_DET:
+                let detallado = state.base.filter(country => country.id === action.payload )
+                return{
+                    ...state,
+                    detail: detallado
                 }
         
             default:

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY } from "./action_types";
+import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY, GET_DET } from "./action_types";
 
 
 export const getCountries = ()=>{
@@ -112,4 +112,17 @@ export const orderBy = (name)=>{
             console.log(error.message)
         }
     }
+}
+
+export const getDetail = (id)=>{
+        return async (dispatch)=>{
+           try {
+            return  dispatch({
+                type: GET_DET,
+                payload: id
+            })
+           } catch (error) {
+            console.log(error.message)
+           }
+        }
 }
