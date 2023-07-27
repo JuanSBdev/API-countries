@@ -72,6 +72,7 @@ const reducer = (state = initialState, action)=>{
                   ...state,
                   paises: orderByPopulation
                 };
+                
                 default:
                     return { ...state
                     };
