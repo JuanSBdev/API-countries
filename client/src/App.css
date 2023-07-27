@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 :root{
-    background: rgb(67,231,199);
-background: linear-gradient(0deg, rgba(67,231,199,1) 0%, rgba(19,197,147,1) 48%);
+    background: rgb(117, 75, 206);
+    background: linear-gradient(0deg, rgb(155, 138, 231) 21%, rgb(69, 64, 231) 74%);
 font-family: 'Heebo', sans-serif;
 }

@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    background-color: aquamarine;
+    background-color: rgb(155, 138, 231);
     height: 20%;
     border-radius: 1rem;
 }
@@ -19,6 +19,7 @@
 }
 .p{
     margin-left: 10%;
+    font-size: 1.2rem;
 }
 .divInput{
     width: 50%;
@@ -31,7 +32,7 @@
 }
 .inputText{
     border-radius: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     margin-left: 2%;
 }

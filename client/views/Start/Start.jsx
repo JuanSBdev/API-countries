@@ -14,14 +14,14 @@ export default function Start() {
   }, [])
   
   return (
-    <div>
-      <h1>Find your country</h1>
+    <div className={styles.wrapper}>
+      <h1 className={styles.h1_start}>Countries API</h1>
       <Link to='/countries'>
         <button className={styles.btn_start}>
                           start
         </button>
       </Link>
-        <p>developed by juansb.dev@gmail.com</p>
+        <p className={styles.p_start}>developed by juansb.dev@gmail.com</p>
     </div>
   )
 }

@@ -1,0 +1,25 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30%;
+    background-image: url('https://cdn.worlddata.info/pics/map-world.png');
+    
+}
+.h1_start{
+    font-size: 3rem;
+    margin-top: 10%;
+}
+.btn_start{
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 10px 0;
+    padding: 100%;
+}
+.p_start{
+    position: absolute;
+    bottom: 1%;
+}
