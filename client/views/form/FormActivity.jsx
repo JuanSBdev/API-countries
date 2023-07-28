@@ -60,7 +60,7 @@ return(
                 </select>
 
                 <label >Place:</label>
-                <input type="text" name="countries" id="countries" placeholder="" required maxlength="500"/>
+                <input type="text" name="countries" id="countries" placeholder="" required maxLength="500"/>
 
                 <button
                 className={styles.btn_submit}

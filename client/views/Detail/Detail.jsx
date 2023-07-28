@@ -14,8 +14,8 @@ export default function Detail() {
   let detailed = useSelector(state => state.detail)
   return (
     <div className={styles.wrapper_top}>
-   {detailed.map(country =>(
-    <div className={styles.wrapper}>
+   {detailed.map((country, index) =>(
+    <div key={index} className={styles.wrapper}>
       <div className={styles.wrapper_map}>
         <div className={styles.separador}>
           <h1>{country.nombre}</h1>
