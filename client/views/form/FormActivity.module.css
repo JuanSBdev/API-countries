@@ -1,0 +1,33 @@
+.wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.form{
+    border: 5px solid white;
+    padding: 2rem;
+    margin: 2%;
+    border-radius: 1rem;
+    
+    display: flex;
+    flex-flow: column;
+
+    
+}
+.form input{
+    border-radius: 1rem;
+}
+.btn_submit{
+    margin: 10%;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 10px 0;
+    padding: 4%;
+}
+.btn_submit:hover{
+    box-shadow: 0 0 9px 0;
+}
+.btn_submit:active{
+    box-shadow: 0 0 4px 0;
+}
