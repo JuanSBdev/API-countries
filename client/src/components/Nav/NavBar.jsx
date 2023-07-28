@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styles from './navBar.module.css'
 import { useDispatch } from 'react-redux';
 import { getCountry } from '../../redux/actions';
+import { Link } from 'react-router-dom';
+import FormActivity from '../../../views/form/FormActivity';
 
 let logoWorld = 'https://cdn-icons-png.flaticon.com/512/4974/4974772.png'
 let logoBuscar = 'https://www.seekpng.com/png/full/958-9588716_buscar-buscarlogo-buscador-lupalogo-lupa-search-icon-search.png'
@@ -33,7 +35,12 @@ export default function NavBar() {
                 <img src={logoBuscar} 
                  alt="lupa"
                  onClick={buscarPais} />
+                
+                
         </div>
+        <Link to={'/form'}>
+                    actividad
+                </Link>
     </div>
   )
 }

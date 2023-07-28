@@ -1,22 +1,31 @@
+.h1{
+    color: white;
+}
+
 .wrapper{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    padding-bottom: 15%;
 }
+
 .form{
     border: 5px solid white;
     background-color: rgb(222, 139, 235);
     padding: 2rem;
     margin: 2%;
     border-radius: 1rem;
+    box-shadow: 0 0 10px 0;
     
     display: flex;
     flex-flow: column;
+    overflow: hidden;
 
     
 }
 .form input{
     border-radius: 1rem;
+    border: none;
 }
 .form select{
     border-radius: 1rem;
@@ -34,10 +43,29 @@
     border-top: 2px solid rgb(109, 61, 163);
 }
 .btn_submit:hover{
-    margin-left: -10%;
-    margin-right: -10%;
+    margin-left: -20%;
+    margin-right: -20%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
     border-top: 2px solid rgb(109, 61, 163);
 }
 .btn_submit:active{
     box-shadow: 0 0 4px 0;
+}
+
+.regresar{
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.regresar:hover{
+    transform: scale(1.1);
+}
+.regresar img{
+    width: 20%;
 }
