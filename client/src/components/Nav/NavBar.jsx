@@ -36,9 +36,10 @@ export default function NavBar() {
                  alt="lupa"
                  onClick={buscarPais} />
                 
-                
         </div>
-        <Link to={'/form'}>
+        <Link
+        className={styles.btn_activity}
+         to={'/form'}>
                     actividad
                 </Link>
     </div>
