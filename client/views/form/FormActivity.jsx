@@ -4,9 +4,10 @@ import { Link } from "react-router-dom"
 
 export default function FormActivity(){
     let [season, setSeason] = useState('Spring')
+    let [countries, setCountries] = useState([])
     let [form, setForm] = useState({
         name:'',
-        place:'',
+        places:'',
         time:'',
         season: season
     })
@@ -23,6 +24,20 @@ export default function FormActivity(){
         e.preventDefault()
         let {value} = e.target
         setSeason(value)
+    }
+
+    let handleCountries = (e) => {
+        let { value } = e.target;
+        setCountries(value);
+    };
+    let addPlace = ()=>{
+        console.log(countries)
+        setForm((prevValues)=>({
+            ...prevValues,
+            places: [...prevValues.places, countries]
+
+        }))
+        setCountries('')
     }
     let submitForm =(e)=>{
         e.preventDefault()
@@ -60,11 +75,25 @@ return(
                 </select>
 
                 <label >Place:</label>
-                <input type="text" name="countries" id="countries" placeholder="" required maxLength="500"/>
+                <input type="text" onChange={handleCountries} name="countries" id="countries"
+                value={countries}
+                 placeholder=""  maxLength="500"/>
+                <button onClick={addPlace}>+</button>
+                
+                <div className={styles.countriesSelected}>
+                    {form.places.length > 0 ? (
+                        form.places.map((country, index) => (
+                            <p key={index}>{country}</p>
+                        ))
+                    ) : (
+                        <p>ads</p>
+                    )}
+                </div>
 
                 <button
                 className={styles.btn_submit}
                  type="submit">Submit</button>
+
             </form>
             <div>
             <Link to={'/countries'}
