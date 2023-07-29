@@ -28,17 +28,36 @@ export default function FormActivity(){
 
     let handleCountries = (e) => {
         let { value } = e.target;
-        setCountries(value);
+
+            setCountries(value);
+
     };
     let addPlace = ()=>{
         console.log(countries)
-        setForm((prevValues)=>({
-            ...prevValues,
-            places: [...prevValues.places, countries]
+        if(countries.length > 0){
+            setForm((prevValues)=>({
+                ...prevValues,
+                places: [...prevValues.places, countries]
+    
+            }))
 
-        }))
+        }
+        else{
+            alert('add a valid country for your activity')
+        }
         setCountries('')
     }
+
+    let removeCountry = (index) => {
+        // Filtrar los países para excluir el país que se debe eliminar
+        const updatedCountries = form.places.filter((country, idx) => idx !== index);
+        // Actualizar el estado con la nueva lista filtrada
+        setForm((prevValues) => ({
+            ...prevValues,
+            places: updatedCountries,
+        }));
+    };
+
     let submitForm =(e)=>{
         e.preventDefault()
 
@@ -83,10 +102,12 @@ return(
                 <div className={styles.countriesSelected}>
                     {form.places.length > 0 ? (
                         form.places.map((country, index) => (
-                            <p key={index}>{country}</p>
+                            <p key={index} onClick={()=>removeCountry(index)}>
+                                {country}
+                                </p>
                         ))
                     ) : (
-                        <p>ads</p>
+                        <p>'none'</p>
                     )}
                 </div>
 
