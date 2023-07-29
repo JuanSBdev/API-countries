@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react"
 import styles from './FormActivity.module.css'
 import { Link } from "react-router-dom"
+import { useDispatch } from "react-redux"
+
 
 export default function FormActivity(){
+    let dispatch = useDispatch()
+
     let [season, setSeason] = useState('Spring')
     let [countries, setCountries] = useState([])
     let [form, setForm] = useState({
@@ -49,9 +53,7 @@ export default function FormActivity(){
     }
 
     let removeCountry = (index) => {
-        // Filtrar los países para excluir el país que se debe eliminar
         const updatedCountries = form.places.filter((country, idx) => idx !== index);
-        // Actualizar el estado con la nueva lista filtrada
         setForm((prevValues) => ({
             ...prevValues,
             places: updatedCountries,
