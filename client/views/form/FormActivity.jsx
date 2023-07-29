@@ -94,10 +94,12 @@ return(
                 </select>
 
                 <label >Place:</label>
+                <div className={styles.inputPlace}>
                 <input type="text" onChange={handleCountries} name="countries" id="countries"
                 value={countries}
                  placeholder=""  maxLength="500"/>
                 <button onClick={addPlace}>+</button>
+                </div>
                 
                 <div className={styles.countriesSelected}>
                     {form.places.length > 0 ? (
