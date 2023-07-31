@@ -16,28 +16,9 @@ export default function Detail() {
     console.log(activityFound)
   }, []);
   let detailed = useSelector(state => state.detail);
-  let activities = useSelector(state => state.activities);
+  let activity = useSelector(state => state.activities);
 
-  let activityFound = null;
 
-  if (!loading) {
-    // Find the activity that corresponds to the country in the detail
-    for (let activity of activities) {
-      for (let country of activity.Countries) {
-        if (country.nombre === detailed[0].name) {
-          activityFound = activity;
-          break;
-        }
-      }
-      if (activityFound) {
-        break;
-      }
-    }
-  }
-    if(activityFound ){
-      console.log(activityFound)
-      setLoading(false)
-    }
 
   return (
     <div className={styles.wrapper_top}>
