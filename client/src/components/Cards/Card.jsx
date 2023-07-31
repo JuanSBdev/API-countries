@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Card.module.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { delCountry, getDetail } from '../../redux/actions'
+import { delCountry, getDetail, getActivities } from '../../redux/actions'
 import { Link } from 'react-router-dom'
 
 export default function Card(props) {
@@ -13,7 +13,8 @@ let deleteCountry = ()=>{
 }
 
   return (
-    <div className={styles.wrapper}>
+    <div  className={styles.wrapper}
+    >
         <div className={styles.separador}>
           <h1 className={styles.h1_name}>{props.name}</h1>
           <p className={styles.p_id}>#{props.id}</p>

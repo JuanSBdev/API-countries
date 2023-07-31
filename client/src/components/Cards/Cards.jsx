@@ -1,10 +1,16 @@
-import React from 'react'
-import { useSelector} from 'react-redux'
+import React, {useEffect} from 'react'
+import { useSelector, useDispatch} from 'react-redux'
 import Card from './Card';
 import styles from './Cards.module.css'
 import Filtros from '../Filters/Filtros';
 
+import { getActivities } from '../../redux/actions';
+
 export default function Cards() {
+    let dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(getActivities())
+      },[])
     let paises = useSelector(state => state.paises)
   return (
     <div className={styles.wrapper}>
