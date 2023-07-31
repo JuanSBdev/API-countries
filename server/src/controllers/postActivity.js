@@ -20,17 +20,17 @@ const postActivity = async (req, res)=>{
         }
         let nuevaActividad = await Activity.create(actividad)
             
-        let countryFound = await Country.findOne({
+        let countriesFound = await Country.findAll({
             where:{
                 nombre:{
-                    [Op.iLike]: `%${actividad.lugar}%`
+                    [Op.or]: places.map(place => ({ [Op.iLike]: `%${place}%` }))
                 }
             }
     })
-            console.log(countryFound)
-        await nuevaActividad.addCountry(countryFound)
+            console.log(countriesFound)
+        await nuevaActividad.addCountry(countriesFound)
 
-        res.status(201).json(countryFound)
+        res.status(201).json(countriesFound)
     } catch (error) {
         res.status(400).json({ message: error.message });
 

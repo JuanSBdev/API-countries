@@ -85,7 +85,7 @@ return(
                 <input type="number" id="numero" name="dificulty" min="1" max="5" placeholder="1-5" required />
 
                 <label >Duration:</label>
-                <input type="number" id="hora" name="time" min="1" max="24" required />
+                <input type="time" id="hora" name="time" min="1" max="24" required />
 
                 <label >Season:</label>
                  <select name="season" id="season"
