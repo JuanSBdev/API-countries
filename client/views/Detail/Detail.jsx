@@ -9,46 +9,42 @@ export default function Detail() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const { id } = useParams();
+  const detailed = useSelector(state => state.detail);
 
   useEffect(() => {
     dispatch(getDetail(id)).then(() => setLoading(false))
-  }, []);
-  let detailed = useSelector(state => state.detail);
+    console.log('hallo');
+  }, [dispatch, id]);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
+  let activity = detailed.Activities.map((act) => act.nombre);
 
   return (
     <div className={styles.wrapper_top}>
-      {loading ? (
-        <div>Loading...</div>
-      )
-      // : (
-      //   detailed.map((country, index) => (
-      //     <div key={index} className={styles.wrapper}>
-      //       <div className={styles.wrapper_map}>
-      //         <div className={styles.separador}>
-      //           <h1>{country.nombre}</h1>
-      //           <p>#{country.id}</p>
-      //         </div>
-      //         <div className={styles.imgContainer}>
-      //           <img src={country.bandera} alt="flag" />
-      //         </div>
-      //       </div>
-      //       <div className={styles.extras}>
-      //         <p>{`Continente: ${country.continente}`}</p>
-      //         <p>{`Subregion: ${country.subregion}`}</p>
-      //         <p>{`Capital: ${country.capital}`}</p>
-      //         <p>{`Area: ${country.area} km2`}</p>
-      //         <p>{`Population: ${country.poblacion}`}</p>
-      //         <p>{activityFound ? activityFound.nombre : 'none'}</p>
-      //       </div>
-      //     </div>
-      //   ))
-      // )
-        :(
-          <p>{detailed.Activities.map(act => act.nombre)}</p>        
-        )
-    }
+      <div className={styles.wrapper}>
+        <div className={styles.wrapper_map}>
+          <div className={styles.separador}>
+            <h1>{detailed.nombre}</h1>
+            <p>#{detailed.id}</p>
+          </div>
+          <div className={styles.imgContainer}>
+            <img src={detailed.bandera} alt="flag" />
+          </div>
+        </div>
+        <div className={styles.extras}>
+          <p>{`Continent: ${detailed.continente}`}</p>
+          <p>{`Subregion: ${detailed.subregion}`}</p>
+          <p>{`Capital: ${detailed.capital}`}</p>
+          <p>{`Area: ${detailed.area} km2`}</p>
+          <p>{`Population: ${detailed.poblacion}`}</p>
+          <p>activities:</p>
+          <p className={styles.activities}>  {activity.length > 0 ? activity.join(', ') : 'None'}</p>
+        </div>
+      </div>
+
       <div>
         <Link to={'/countries'} className={styles.regresar}>
           <img

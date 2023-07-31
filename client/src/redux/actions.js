@@ -120,8 +120,8 @@ export const getDetail = (id)=>{
              try {
                 let response = await axios(endpoint)
                 let data = response.data
-                console.log(id)
-                console.log(data)
+                // console.log(id)
+                // console.log(data)
 
             return  dispatch({
                 type: GET_DET,
