@@ -7,12 +7,12 @@ const { Country, Activity } = require('../db');
 
 
 const postActivity = async (req, res)=>{
-    let { name, countries, dificulty, places, season, time } = req.body
+    let { name,  dificulty, places, season, time } = req.body
     let id = uuid.v4()
     try {
         let actividad = {
             id: id,
-            nombre: name[0],
+            nombre: name,
             lugar: places,
             dificultad: dificulty,
             duracion: time,
@@ -23,7 +23,7 @@ const postActivity = async (req, res)=>{
         let countryFound = await Country.findOne({
             where:{
                 nombre:{
-                    [Op.iLike]: `%${actividad.nombre}%`
+                    [Op.iLike]: `%${actividad.lugar}%`
                 }
             }
     })
