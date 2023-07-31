@@ -5,7 +5,8 @@ const initialState = {
     paises:[],
     allContinents:[],
     primeros:[],
-    detail:[]
+    detail:[],
+    activities: []
 }
 
 const reducer = (state = initialState, action)=>{
@@ -41,7 +42,7 @@ const reducer = (state = initialState, action)=>{
         case CRE_ACT:
             return {
                 ...state,
-                    actividades: [...state.actividades, action.payload]
+                    activities: [...state.activities, action.payload]
             
             }
         case GET_ACT:

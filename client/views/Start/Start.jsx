@@ -24,5 +24,8 @@ export default function Start() {
         </div>
         <p className={styles.p_start}>developed by juansb.dev@gmail.com</p>
     </div>
+    
+      
+    
   )
 }

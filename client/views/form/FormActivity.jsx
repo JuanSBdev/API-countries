@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import styles from './FormActivity.module.css'
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
+import { createActivity } from "../../src/redux/actions"
 
 
 export default function FormActivity(){
@@ -64,7 +65,7 @@ export default function FormActivity(){
         e.preventDefault()
 
         console.log(form)
-
+        dispatch(createActivity(form))        
     }
 
 return(
@@ -81,7 +82,7 @@ return(
 
 
                 <label > dificulty:</label>
-                <input type="number" id="numero" name="numero" min="1" max="5" placeholder="1-5" required />
+                <input type="number" id="numero" name="dificulty" min="1" max="5" placeholder="1-5" required />
 
                 <label >Duration:</label>
                 <input type="number" id="hora" name="time" min="1" max="24" required />
