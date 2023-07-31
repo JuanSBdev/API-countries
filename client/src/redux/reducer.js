@@ -81,11 +81,11 @@ const reducer = (state = initialState, action)=>{
                     };
                 }
             case GET_DET:
-                let detallado = state.base.filter(country => country.id === action.payload )
-                console.log(detallado)
+                // let detallado = state.base.filter(country => country.id === action.payload )
+                // console.log(detallado)
                 return{
                     ...state,
-                    detail: detallado
+                    detail: action.payload
                 }
         
             default:

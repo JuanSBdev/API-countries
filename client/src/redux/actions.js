@@ -116,10 +116,16 @@ export const orderBy = (name)=>{
 
 export const getDetail = (id)=>{
         return async (dispatch)=>{
-           try {
+            const endpoint = `http://localhost:3001/country/${id}`
+             try {
+                let response = await axios(endpoint)
+                let data = response.data
+                console.log(id)
+                console.log(data)
+
             return  dispatch({
                 type: GET_DET,
-                payload: id
+                payload: data
             })
            } catch (error) {
             console.log(error.message)
