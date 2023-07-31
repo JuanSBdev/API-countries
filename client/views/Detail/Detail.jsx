@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import { getDetail } from '../../src/redux/actions';
+import { getActivities, getDetail } from '../../src/redux/actions';
 import styles from './Detail.module.css'
 
 export default function Detail() {
@@ -10,8 +10,13 @@ export default function Detail() {
   const { id } = useParams();
   useEffect(()=>{
     dispatch(getDetail(id))
+     dispatch(getActivities())
+    console.log(activity)
   },[])
   let detailed = useSelector(state => state.detail)
+  let activity = useSelector(state => state.activities)
+
+
   return (
     <div className={styles.wrapper_top}>
    {detailed.map((country, index) =>(
