@@ -64,6 +64,9 @@
 .activities:hover{
     transform: scale(1.1);
 }
+.link_add{
+    text-decoration: none;
+}
 .regresar{
     width: 100%;
     padding-top: 5%;
