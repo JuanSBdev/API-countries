@@ -1,5 +1,6 @@
 .h1{
-    color: rgb(248, 220, 36);
+    color: rgb(9, 110, 65);
+    font-size: 3rem;
 }
 
 .wrapper{
@@ -24,7 +25,7 @@
     flex-flow: row nowrap;
     align-content: center;
     align-items: center;
-    background-color: rgba(155, 208, 62, 0.886);
+    background-color: rgba(75, 108, 20, 0.423);
     
 }
 .img_form{

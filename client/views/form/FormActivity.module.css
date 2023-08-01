@@ -14,16 +14,20 @@
 
 .regresar{
     position: absolute;
-    left: 1%;
+    left: 15%;
+    top: 15%;
     width: 5%;
+    padding: 2%;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 
     display: flex;
     flex-flow: column;
     align-items: center;
+    border-radius: 1rem;
 }
 .regresar:hover{
+    background-color: rgba(240, 248, 255, 0.04);
     transform: scale(1.1);
 }
 .regresar img{

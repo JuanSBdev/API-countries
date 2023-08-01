@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux"
 import { createActivity, getActivities } from "../../redux/actions"
 
 export default function Form(){
-    let imgForm = 'https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg'
+    let imgForm = 'https://wallpaperaccess.com/full/352320.jpg'
     
     let dispatch = useDispatch()
 
