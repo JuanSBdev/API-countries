@@ -6,22 +6,24 @@
     
 }
 .wrapper h1{
-
-    color: white;
+font-size: 3rem;
+    color: rgb(3, 1, 1);
 }
 .wrapper_top{
+
     width: 80%;
     display: flex;
+    flex-flow:column;
     align-content: center;
     align-items: center;
     justify-content: space-evenly;
 }
 .link_form{
+    padding: 1%;
     text-decoration: none;
-    border: 5px solid white;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.963);
     border-radius: 1rem;
-    color: #000;
+    color: #ecd139;
     box-shadow: 0 0 10px 0;
 }
 .link_form:hover{
@@ -41,12 +43,14 @@
     flex-flow: column;
     margin: 2%;
     padding: 1%;
-    border: 5px solid rgb(236, 204, 243);
     border-radius: 1rem;
-    background-color: rgb(183, 90, 229);
+    background-color: rgba(230, 202, 45, 0.42);
     box-shadow: 0 0 10px 0;
     align-items: center;
     justify-content: center;
+}
+.div_act h2{
+    border-bottom: 1px solid black;
 }
 .div_act p{
     margin: 2%;
@@ -59,17 +63,21 @@
 .regresar{
     position: absolute;
     left: 1%;
-    top: 50%;
+    top: 10%;
+    padding-top: 2%;
+    border-radius: 1rem;
     
     width: 10%;
     text-decoration: none;
-    color: black;
+    color: rgb(238, 229, 229);
 
     display: flex;
     flex-flow: column;
     align-items: center;
+    background-color: rgba(240, 248, 255, 0.141);
 }
 .regresar:hover{
+    background-color: rgba(199, 174, 35, 0.215);
     transform: scale(1.1);
 }
 .regresar img{

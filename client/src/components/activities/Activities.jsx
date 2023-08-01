@@ -33,13 +33,12 @@ export default function Activities(props) {
 
         <Link to={'/countries'}
                 className={styles.regresar}>
-                <img src="https://cdn-icons-png.flaticon.com/512/318/318493.png?w=360" alt="" />
-                <h4>BACK</h4> 
+<img src="https://sistagua.com/wp-content/uploads/2020/03/ArrowLeft.png" alt="" />                <h4>BACK</h4> 
             </Link>
         <h1>activities</h1>
         <Link to={'/activity/form'}
         className={styles.link_form}
-        > ADD ACTIVITY</Link>
+        > Add Activity</Link>
         </div>
 
         <div className={styles.wrapper_down}>
@@ -49,7 +48,7 @@ export default function Activities(props) {
             theActivities.map((act, index)=>(
                 
                 <div key={index} className={styles.div_act}>
-             <p>Name: {act.nombre}</p>
+             <h2> {act.nombre}</h2>
             <p>Dificulty: {act.dificultad}</p>
             <p>Duration: {act.duracion}</p>
             <p>Season: {act.temporada}</p>
