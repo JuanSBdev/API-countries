@@ -47,10 +47,7 @@ export default function Detail() {
 
       <div>
         <Link to={'/countries'} className={styles.regresar}>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/318/318493.png?w=360"
-            alt=""
-          />
+        <img src="https://sistagua.com/wp-content/uploads/2020/03/ArrowLeft.png" alt="" />
           <h4>BACK</h4>
         </Link>
       </div>

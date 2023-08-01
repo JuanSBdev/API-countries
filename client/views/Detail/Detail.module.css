@@ -78,13 +78,13 @@
 }
 .regresar{
     width: 100%;
-    padding-top: 5%;
+    margin-top: 5%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: rgb(254, 254, 254);
 }
 .regresar:hover{
     transform: scale(1.1);
