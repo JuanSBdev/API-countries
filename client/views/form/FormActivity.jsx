@@ -7,19 +7,16 @@ import Activities from "../../src/components/activities/Activities"
 import Form from "../../src/components/activities/Form"
 
 export default function FormActivity(){
-    let [loading, setLoading] = useState(true)
 
     let dispatch = useDispatch()
     useEffect(()=>{
         dispatch(getActivities())
-        .then(setLoading(true))
     },[])
     return(
 
 <div className={styles.wrapper}>
     <div className={styles.main}>
             <Form/>
-            <Activities loading={loading}/>
     </div>
     <div className={styles.back}>
     

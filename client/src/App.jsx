@@ -11,6 +11,7 @@ import Start from '../views/Start/Start'
 import Inicio from '../views/inicio/Inicio';
 import Detail from '../views/Detail/Detail';
 import FormActivity from '../views/form/FormActivity';
+import ActivityView from '../views/ActivityView';
 
 export default function App() {
   
@@ -21,8 +22,9 @@ export default function App() {
         <Route path='/' element={<Start/>}/>
         <Route path='/countries' element={<Inicio/>}/>
         <Route path='/country/:id' element={<Detail/>}/>
-        <Route path='/form' element={<FormActivity/>}/>
-
+        <Route path='/activity/form' element={<FormActivity/>}/>
+        <Route path='/activity' element={<ActivityView/>
+}/>
       </Routes>
       
       

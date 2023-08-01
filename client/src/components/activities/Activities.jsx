@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import styles from './Activities.module.css'
 import { getActivities } from "../../redux/actions"
+import { Link } from 'react-router-dom'
 
 
 export default function Activities(props) {
@@ -28,7 +29,14 @@ export default function Activities(props) {
     
   return (
     <div className={styles.wrapper}>
+        <div className={styles.wrapper_top}>
+
         <h1>activities</h1>
+        <Link to={'/activity/form'}
+        className={styles.link_form}
+        > ADD ACTIVITY</Link>
+        </div>
+
         <div className={styles.wrapper_down}>
              
         { theActivities && theActivities.length > 0 ?(
@@ -36,15 +44,15 @@ export default function Activities(props) {
             theActivities.map((act, index)=>(
                 
                 <div key={index} className={styles.div_act}>
-             <p>{act.nombre}</p>
-            <p>{act.dificultad}</p>
-            <p>{act.duracion}</p>
-            <p>{act.temporada}</p>
-            <div className={styles.div_act_country}>
+             <p>Name: {act.nombre}</p>
+            <p>Dificulty: {act.dificultad}</p>
+            <p>Duration: {act.duracion}</p>
+            <p>Season: {act.temporada}</p>
+            <div  className={styles.div_act_country}>
                 {
                     act.Countries.map((country, inx) => (
                         <div key={inx} className="">
-                            <p>{country.nombre}</p>
+                            <p> ¿where? {country.nombre}</p>
                         </div>
                     ))
                 }

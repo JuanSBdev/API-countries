@@ -39,7 +39,7 @@ export default function NavBar() {
         </div>
         <Link
         className={styles.btn_activity}
-         to={'/form'}>
+         to={'/activity'}>
                     actividad
                 </Link>
     </div>
