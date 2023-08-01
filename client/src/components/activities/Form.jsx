@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import styles from './Form.module.css'
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { createActivity } from "../../redux/actions"
+import { createActivity, getActivities } from "../../redux/actions"
 
 export default function Form(){
     let dispatch = useDispatch()
@@ -63,7 +63,7 @@ export default function Form(){
     let submitForm =(e)=>{
         e.preventDefault()
         // console.log(form)
-        dispatch(createActivity(form))        
+        dispatch(createActivity(form))       
     }
 
 return(

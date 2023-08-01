@@ -1,0 +1,25 @@
+.wrapper{
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1%;
+}
+.wrapper_down{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.div_act{
+    display: flex;
+    flex-flow: column;
+    margin: 2%;
+    padding: 1%;
+    border: 5px solid rgb(236, 204, 243);
+    border-radius: 1rem;
+    background-color: rgb(183, 90, 229);
+}
+.div_act p{
+    margin: 2%;
+}
+.div_act_country{
+    display: flex;
+}
