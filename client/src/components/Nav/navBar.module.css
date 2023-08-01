@@ -5,6 +5,7 @@
     background-color: rgb(219, 106, 223);
     height: 20%;
     border-radius: 1rem;
+    align-items: center;
 }
 .divLogo{
     display: flex;
@@ -42,4 +43,13 @@ padding: 2%;
 }
 .btn_activity{
     text-decoration: none;
+    margin-right: 2%;
+    border: 4px solid rgb(255, 255, 255);
+    padding: 2%;
+    background-color: rgb(227, 132, 241);
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 0;
+}
+.btn_activity:hover{
+    box-shadow: 0 0 10px 0;
 }

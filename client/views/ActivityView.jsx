@@ -6,7 +6,6 @@ export default function ActivityView() {
   return (
     <div>
         <Activities/>
-        <Link to={'/activity/form'}> ADD ACTIVITY</Link>
     </div>
   )
 }

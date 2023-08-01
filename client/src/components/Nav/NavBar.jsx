@@ -40,7 +40,7 @@ export default function NavBar() {
         <Link
         className={styles.btn_activity}
          to={'/activity'}>
-                    actividad
+                    activities
                 </Link>
     </div>
   )

@@ -31,6 +31,11 @@ export default function Activities(props) {
     <div className={styles.wrapper}>
         <div className={styles.wrapper_top}>
 
+        <Link to={'/countries'}
+                className={styles.regresar}>
+                <img src="https://cdn-icons-png.flaticon.com/512/318/318493.png?w=360" alt="" />
+                <h4>BACK</h4> 
+            </Link>
         <h1>activities</h1>
         <Link to={'/activity/form'}
         className={styles.link_form}
