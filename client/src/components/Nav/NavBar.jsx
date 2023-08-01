@@ -5,7 +5,7 @@ import { getCountry } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import FormActivity from '../../../views/form/FormActivity';
 
-let logoWorld = 'https://cdn-icons-png.flaticon.com/512/4974/4974772.png'
+let logoWorld = 'https://climate-adapt.eea.europa.eu/es/metadata/projects/the-farmers-toolbox-for-climate-change-mitigation/image_large'
 let logoBuscar = 'https://www.seekpng.com/png/full/958-9588716_buscar-buscarlogo-buscador-lupalogo-lupa-search-icon-search.png'
 export default function NavBar() {
     let dispatch = useDispatch()
@@ -28,9 +28,9 @@ export default function NavBar() {
             src={logoWorld} alt="" />
         </div>
         <div className={styles.divInput}>
-                <p className={styles.p}>buscar país</p>
                 <input onChange={handleInput}
                  type="text"
+                 placeholder='search country'
                  className={styles.inputText} />
                 <img src={logoBuscar} 
                  alt="lupa"
@@ -40,7 +40,7 @@ export default function NavBar() {
         <Link
         className={styles.btn_activity}
          to={'/activity'}>
-                    activities
+                    <p>activities</p>
                 </Link>
     </div>
   )

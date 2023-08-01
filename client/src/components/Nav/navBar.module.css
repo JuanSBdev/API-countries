@@ -1,22 +1,32 @@
+@keyframes rotateLeft {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 .wrapper{
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    background-color: rgb(219, 106, 223);
+    background-color: rgba(46, 232, 32, 0.331);
     height: 20%;
     border-radius: 1rem;
+    box-shadow: 0 0 10px 0;
     align-items: center;
 }
 .divLogo{
+
     display: flex;
     width: 50%;
     justify-content: center;
 
 }
 .imgLogo{
-    width: 15%;
-    transform: scale(.9);
-    margin-bottom: 5%;
+    animation: rotateLeft 10s linear infinite;
+    width: 20%;
+    transform: scale(1.1);
 }
 .p{
     margin-left: 10%;
@@ -43,13 +53,15 @@ padding: 2%;
 }
 .btn_activity{
     text-decoration: none;
-    margin-right: 2%;
-    border: 4px solid rgb(255, 255, 255);
-    padding: 2%;
-    background-color: rgb(227, 132, 241);
-    border-radius: 1rem;
-    box-shadow: 0 0 5px 0;
+    margin-right: 3%;
+    padding-left: 4%;
+    border-left: 1px solid #000;
+    color: rgb(2, 14, 24);
 }
-.btn_activity:hover{
-    box-shadow: 0 0 10px 0;
+.btn_activity p{
+    font-size: 1.4rem;
+
+}
+.btn_activity p:hover{
+    transform: scale(1.1);
 }
