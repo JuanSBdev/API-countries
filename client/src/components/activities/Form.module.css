@@ -3,6 +3,7 @@
 }
 
 .wrapper{
+    width: 50%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -10,6 +11,7 @@
 }
 
 .form{
+
     border: 5px solid white;
     background-color: rgb(222, 139, 235);
     padding: 2rem;
@@ -67,19 +69,3 @@
     box-shadow: 0 0 4px 0;
 }
 
-.regresar{
-    width: 100%;
-    padding-top: 5%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-}
-.regresar:hover{
-    transform: scale(1.1);
-}
-.regresar img{
-    width: 20%;
-}

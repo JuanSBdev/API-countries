@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+}
+
+.regresar{
+    width: 5%;
+    position: absolute;
+    left: 1%;
+    top: 40%;
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.regresar:hover{
+    transform: scale(1.1);
+}
+.regresar img{
+    width: 50%;
+}
