@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux"
 import { createActivity, getActivities } from "../../redux/actions"
 
 export default function Form(){
-    let imgForm = 'https://www.hdwallpapers.in/download/red_green_tents_under_blue_starry_sky_during_nighttime_4k_hd_nature-3840x2160.jpg'
+    let imgForm = 'https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg'
     
     let dispatch = useDispatch()
 
@@ -71,7 +71,6 @@ export default function Form(){
 return(
     <div className={styles.wrapper}>
            
-            <h1 className={styles.h1}>Add Activity</h1>
 
             <div className={styles.wrapper_form}>
                 <div className={styles.img_form}>
@@ -83,6 +82,8 @@ return(
             onSubmit={submitForm}
             className={styles.form}
             >
+                            <h1 className={styles.h1}>Add Activity</h1>
+
                 <label >Name:</label>
                 <input type="text" name="name" />
 
