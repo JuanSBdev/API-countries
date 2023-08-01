@@ -57,7 +57,6 @@ export default function Filtros() {
         className={styles.selectOrder}>
           <option value="Alfabetico">A-Z</option>
           <option value="Population">+Population</option>
-          <option value="Activities">With Activities</option>
         </select>
         <button type='submit' >Order</button>
       </form>

@@ -69,6 +69,7 @@
     background-color: aliceblue;
     border-radius: 1rem;
     padding: 1%;
+    color: #000;
 }
 .activities:hover{
     transform: scale(1.1);

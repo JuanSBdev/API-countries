@@ -1,5 +1,5 @@
 .h1{
-    color: rgb(9, 110, 65);
+    color: rgb(255, 255, 255);
     font-size: 3rem;
 }
 
@@ -53,6 +53,7 @@
     margin-left: 12%;
     margin-bottom: 15%;
     margin-top: 8%;
+    color: #fff;
 }
 .form input{
     border-radius: 1rem;
@@ -84,6 +85,8 @@
 
 }
 .btn_submit{
+    color: #fff;
+
     background-color: rgba(255, 255, 255, 0.289);
     border-radius: 1rem;
     border: none;
@@ -92,7 +95,7 @@
     box-shadow: 0 0 10px 0;
 }
 .btn_submit:hover{
-    background-color: #ffffff6d;
+    background-color: #722eb22c;
 }
 .btn_submit:active{
     box-shadow: 0 0 4px 0;

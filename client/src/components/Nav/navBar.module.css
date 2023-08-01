@@ -12,7 +12,7 @@
     flex-flow: row nowrap;
 
     background: rgb(139,209,254);
-    background: linear-gradient(264deg, rgba(136, 113, 239, 0.278) 21%, rgba(7, 230, 130, 0.187) 79%);
+    background: linear-gradient(264deg, rgba(123, 49, 201, 0.842) 21%, rgba(69, 43, 220, 0.982) 79%);
         height: 20%;
     border-radius: 1rem;
     box-shadow: 0 0 5px 0;
@@ -100,7 +100,7 @@ padding: 2%;
   width: 100%;
   height: 100%;
   background: rgb(139,209,254);
-  background: linear-gradient(264deg, rgba(136, 113, 239, 0.853) 21%, rgba(7, 230, 130, 0.771) 79%);  border-radius: 10px;
+  background: linear-gradient(264deg, rgba(72, 48, 180, 0.853) 21%, rgba(53, 219, 61, 0.853) 79%);  border-radius: 10px;
 }
 
 .button_86::after {

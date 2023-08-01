@@ -3,12 +3,12 @@
     flex-flow: column nowrap;
     align-items: center;
     margin: 1%;
-    
+    min-height: 650px;
     
 }
 .wrapper h1{
 font-size: 3rem;
-    color: rgb(3, 1, 1);
+    color: rgb(255, 255, 255);
 }
 .wrapper_top{
 
@@ -22,9 +22,9 @@ font-size: 3rem;
 .link_form{
     padding: 1%;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.963);
+    background-color: rgba(255, 255, 255, 0.853);
     border-radius: 1rem;
-    color: #ecd139;
+    color: #e339ec;
     box-shadow: 0 0 10px 0;
 }
 .link_form:hover{
@@ -45,7 +45,7 @@ font-size: 3rem;
     margin: 2%;
     padding: 1%;
     border-radius: 1rem;
-    background-color: rgba(230, 202, 45, 0.42);
+    background-color: rgba(145, 87, 215, 0.93);
     box-shadow: 0 0 10px 0;
     align-items: center;
     justify-content: center;
@@ -78,7 +78,7 @@ font-size: 3rem;
     background-color: rgba(240, 248, 255, 0.141);
 }
 .regresar:hover{
-    background-color: rgba(199, 174, 35, 0.215);
+    background-color: #722eb22c;
     transform: scale(1.1);
 }
 .regresar img{

@@ -27,7 +27,7 @@
     border-radius: 1rem;
 }
 .regresar:hover{
-    background-color: rgba(240, 248, 255, 0.04);
+    background-color: #722eb22c;
     transform: scale(1.1);
 }
 .regresar img{
