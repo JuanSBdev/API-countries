@@ -40,7 +40,7 @@ export default function NavBar() {
         <Link
         className={styles.btn_activity}
          to={'/activity'}>
-                    <p>activities</p>
+                    <button className={styles.button_86} role="button" >activities</button>
                 </Link>
     </div>
   )
