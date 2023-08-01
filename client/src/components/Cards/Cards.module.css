@@ -4,3 +4,7 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+.pagination{
+    position: absolute;
+    bottom: -10%;
+}
