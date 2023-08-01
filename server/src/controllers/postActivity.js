@@ -29,7 +29,6 @@ const postActivity = async (req, res)=>{
     })
             console.log(countriesFound)
         await nuevaActividad.addCountry(countriesFound)
-
         res.status(201).json(countriesFound)
     } catch (error) {
         res.status(400).json({ message: error.message });

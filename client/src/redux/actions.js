@@ -66,6 +66,8 @@ export const createActivity = (activity)=>{
                 type: CRE_ACT,
                 payload: data
             })
+            alert('cargada')
+
         } catch (error) {
             console.log(error)
         }        

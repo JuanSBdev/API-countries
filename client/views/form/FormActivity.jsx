@@ -8,7 +8,7 @@ import { createActivity } from "../../src/redux/actions"
 export default function FormActivity(){
     let dispatch = useDispatch()
 
-    let [season, setSeason] = useState('Spring')
+    let [season, setSeason] = useState('spring')
     let [countries, setCountries] = useState([])
     let [form, setForm] = useState({
         name:'',
@@ -33,13 +33,13 @@ export default function FormActivity(){
 
     let handleCountries = (e) => {
         let { value } = e.target;
-
             setCountries(value);
 
     };
-    let addPlace = ()=>{
-        console.log(countries)
-        if(countries.length > 0){
+    let addPlace = (e)=>{
+        // console.log(countries)
+        e.preventDefault()
+            if(countries.length > 0){
             setForm((prevValues)=>({
                 ...prevValues,
                 places: [...prevValues.places, countries]
@@ -63,8 +63,7 @@ export default function FormActivity(){
 
     let submitForm =(e)=>{
         e.preventDefault()
-
-        console.log(form)
+        // console.log(form)
         dispatch(createActivity(form))        
     }
 
