@@ -1,0 +1,85 @@
+.h1{
+    color: white;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 15%;
+}
+
+.form{
+    border: 5px solid white;
+    background-color: rgb(222, 139, 235);
+    padding: 2rem;
+    margin: 2%;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0;
+    
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+
+    
+}
+.form input{
+    border-radius: 1rem;
+    border: none;
+}
+.form select{
+    border-radius: 1rem;
+}
+.inputPlace button{
+    border-radius: 1rem;
+}
+.countriesSelected{
+    display: flex;
+    flex-flow: row wrap;
+    overflow:visible;
+}
+.countriesSelected p{
+    margin: 1%;
+    border: none;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding-left: 1%;
+    padding-right: 1%;
+    width:max-content ;
+
+}
+.btn_submit{
+    margin-top: 15%;
+    margin-bottom: -20%;
+    background-color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: none;
+    padding: 4%;
+    margin-left: -5%;
+    margin-right: -5%;
+    border-top: 2px solid rgb(170, 123, 225);
+}
+.btn_submit:hover{
+    border-top: 2px solid rgb(109, 61, 163);
+}
+.btn_submit:active{
+    box-shadow: 0 0 4px 0;
+}
+
+.regresar{
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.regresar:hover{
+    transform: scale(1.1);
+}
+.regresar img{
+    width: 20%;
+}
