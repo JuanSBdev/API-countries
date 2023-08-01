@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux"
 import { createActivity, getActivities } from "../../redux/actions"
 
 export default function Form(){
+    let imgForm = 'https://www.hdwallpapers.in/download/red_green_tents_under_blue_starry_sky_during_nighttime_4k_hd_nature-3840x2160.jpg'
+    
     let dispatch = useDispatch()
 
     let [season, setSeason] = useState('spring')
@@ -70,7 +72,13 @@ return(
     <div className={styles.wrapper}>
            
             <h1 className={styles.h1}>Add Activity</h1>
-            <form action=""
+
+            <div className={styles.wrapper_form}>
+                <div className={styles.img_form}>
+                    <img src={imgForm} alt="" />
+                </div>
+
+                <form action=""
             onChange={handleForm}
             onSubmit={submitForm}
             className={styles.form}
@@ -119,6 +127,7 @@ return(
                  type="submit">Submit</button>
 
             </form>
+            </div>
     </div>
 )
 }

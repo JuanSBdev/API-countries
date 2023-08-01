@@ -63,7 +63,7 @@ export default function Activities(props) {
                 }
             </div>
            </div>
-        ) )):(<p>Loading activities...</p>)
+        ) )):(<p>There is no activity loaded</p>)
         
     }
         </div>

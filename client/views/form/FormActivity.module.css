@@ -9,13 +9,13 @@
 }
 .main{
     display: flex;
-
-    width: 100%;
+    width: 80%;
 }
 
 .regresar{
-    width: 15%;
-    margin-left: 50%;
+    position: absolute;
+    left: 1%;
+    width: 5%;
     text-decoration: none;
     color: black;
 
