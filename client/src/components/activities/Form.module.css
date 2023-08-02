@@ -85,6 +85,14 @@
     color: black;
 
 }
+.p_error{
+    color: rgb(248, 66, 0);
+    font-size: 1rem;
+    margin: 0%;
+    margin-bottom: 1%;
+    justify-self: end;
+    align-self: center;
+}
 .btn_submit{
     color: #fff;
 

@@ -102,9 +102,14 @@ return(
 
                 <label > dificulty:</label>
                 <input type="number" id="numero" name="dificulty" min="1" max="5" placeholder="1-5" required />
+                {errors.dificulty ? ( <p className={styles.p_error}>add name </p>
+                ): null}
 
                 <label >Duration:</label>
                 <input type="time" id="hora" name="time" min="1" max="24" required />
+                {errors.time ? ( <p className={styles.p_error}>add duration </p>
+                ): null}
+
 
                 <label >Season:</label>
                  <select name="season" id="season"
@@ -114,6 +119,7 @@ return(
                       <option value="autumn">Autumn</option>
                       <option value="winter">Winter</option>
                 </select>
+        
 
                 <label >Place:</label>
                 <div className={styles.inputPlace}>
@@ -122,6 +128,7 @@ return(
                  placeholder=""  maxLength="500"/>
                 <button onClick={addPlace}>+</button>
                 </div>
+                
                 
                 <div className={styles.countriesSelected}>
                     {form.places.length > 0 ? (
@@ -133,7 +140,11 @@ return(
                     ) : (
                         <p>none</p>
                     )}
+                    
                 </div>
+                {errors.places ? ( <p className={styles.p_error}>add places </p>
+                ): null}
+
 
                 <button
                 className={styles.btn_submit}
