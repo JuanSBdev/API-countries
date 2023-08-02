@@ -53,7 +53,20 @@ export const delCountry = (id) => {
   }
 
 
+export const delActivity =(id) =>{
+    return async (dispatch) =>{
+        try {
+          // await axios.delete(endpoint)
+          return dispatch({
+            type: DEL_ACT,
+            payload: id,
+      });
+        } catch (error) {
+          console.log(error)
+        }
   
+      }
+}
   
 
 export const createActivity = (activity)=>{
