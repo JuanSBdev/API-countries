@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styles from './Form.module.css'
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { createActivity, getActivities } from "../../redux/actions"
 
@@ -65,8 +65,8 @@ export default function Form(){
     let submitForm =(e)=>{
         e.preventDefault()
         // console.log(form)
-        dispatch(createActivity(form))       
-    }
+        dispatch(createActivity(form))
+        }
 
 return(
     <div className={styles.wrapper}>
@@ -119,13 +119,15 @@ return(
                                 </p>
                         ))
                     ) : (
-                        <p>'none'</p>
+                        <p>none</p>
                     )}
                 </div>
 
                 <button
                 className={styles.btn_submit}
-                 type="submit">Submit</button>
+                type="submit">
+                    Submit
+                </button>
 
             </form>
             </div>

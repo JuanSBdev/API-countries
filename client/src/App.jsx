@@ -12,6 +12,7 @@ import Inicio from '../views/inicio/Inicio';
 import Detail from '../views/Detail/Detail';
 import FormActivity from '../views/form/FormActivity';
 import ActivityView from '../views/ActivityView';
+import NotFound from './components/found/NotFound';
 
 export default function App() {
   
@@ -23,8 +24,9 @@ export default function App() {
         <Route path='/countries' element={<Inicio/>}/>
         <Route path='/country/:id' element={<Detail/>}/>
         <Route path='/activity/form' element={<FormActivity/>}/>
-        <Route path='/activity' element={<ActivityView/>
-}/>
+        <Route path='/activity' element={<ActivityView/>}/>
+        <Route path='*' element={<NotFound/>}/>
+
       </Routes>
       
       

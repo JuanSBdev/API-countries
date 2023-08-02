@@ -1,0 +1,16 @@
+.wrapper{
+    min-height: 800px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.wrapper h1{
+    font-size: 5rem;
+    color: rgb(215, 39, 231);
+}
+.wrapper p{
+    color: aliceblue;
+    font-size: 2rem;
+}

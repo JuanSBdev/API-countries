@@ -35,9 +35,11 @@ const reducer = (state = initialState, action)=>{
       
         case DEL_COU:
             let paisesFilter = state.paises.filter(p => p.id !== action.payload)
+            let filterFirst = state.primeros.filter(p => p.id !== action.payload)
             return{
                 ...state,
                 paises: paisesFilter,
+                primeros: filterFirst
             }
         case CRE_ACT:
             return {

@@ -62,7 +62,7 @@ export default function Activities(props) {
                 }
             </div>
            </div>
-        ) )):(<p>There is no activity loaded</p>)
+        ) )):(<p className={styles.p_noactivity}>There is no activities loaded</p>)
         
     }
         </div>

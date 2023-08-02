@@ -61,6 +61,12 @@ font-size: 3rem;
     display: flex;
 }
 
+.p_noactivity{
+    margin-top: 25%;
+    color: rgb(221, 19, 232);
+    font-size: 4rem;
+}
+
 .regresar{
     position: absolute;
     left: 1%;
