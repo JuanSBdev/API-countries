@@ -14,3 +14,13 @@
     color: aliceblue;
     font-size: 2rem;
 }
+.btn_start_again{
+    text-decoration: none;
+    background-color: #c574ed;
+    border-radius: 1rem;
+    padding: 1%;
+    box-shadow: 0 0 10px 0;
+}
+.btn_start_again:hover{
+    transform: scale(1.1);
+}

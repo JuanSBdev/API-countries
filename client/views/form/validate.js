@@ -13,6 +13,9 @@ export default function validate (input){
       if(!input.season){
         errors.season = 'choose season'
       }
-    
+      if(!input.season){
+        errors.season = 'choose season'
+      }
+      
       return errors;
 }
