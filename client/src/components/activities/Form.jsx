@@ -3,12 +3,13 @@ import styles from './Form.module.css'
 import { Link, Navigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { createActivity, getActivities } from "../../redux/actions"
+import validate from "../../../views/form/validate"
 
 export default function Form(){
     let imgForm = 'https://wallpaperaccess.com/full/352320.jpg'
     
     let dispatch = useDispatch()
-
+    const [errors, setErrors] = useState({error: 'fill all information '})
     let [season, setSeason] = useState('spring')
     let [countries, setCountries] = useState([])
     let [form, setForm] = useState({
@@ -23,7 +24,11 @@ export default function Form(){
         setForm((prevValues)=>({
             ...prevValues,
             [name]: value,
-
+            
+        }))
+        setErrors(validate({
+            ...form,
+            [errors]: value
         }))
     }
     let handleSelect = (e)=>{
@@ -38,7 +43,6 @@ export default function Form(){
 
     };
     let addPlace = (e)=>{
-        // console.log(countries)
         e.preventDefault()
             if(countries.length > 0){
             setForm((prevValues)=>({
@@ -64,8 +68,14 @@ export default function Form(){
 
     let submitForm =(e)=>{
         e.preventDefault()
-        // console.log(form)
-        dispatch(createActivity(form))
+        if(!errors.name && !errors.places && !errors.time && !errors.duration){
+            dispatch(createActivity(form))
+            console.log(errors.ok + 'clean')
+        }
+        else{
+
+            console.log(errors)
+        }
         }
 
 return(
@@ -86,7 +96,9 @@ return(
 
                 <label >Name:</label>
                 <input type="text" name="name" />
-
+                {errors.name ? ( <p className={styles.p_error}>add name </p>
+            
+                ): null}
 
                 <label > dificulty:</label>
                 <input type="number" id="numero" name="dificulty" min="1" max="5" placeholder="1-5" required />
@@ -128,7 +140,7 @@ return(
                 type="submit">
                     Submit
                 </button>
-
+                        {errors.error ? (<p className={styles.p_error}> error</p>): null}
             </form>
             </div>
     </div>
