@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GET_COU, DEL_COU, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY, GET_DET } from "./action_types";
+import { GET_COU, DEL_COU, DEL_ACT, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY, GET_DET } from "./action_types";
 
 
 export const getCountries = ()=>{
@@ -53,20 +53,19 @@ export const delCountry = (id) => {
   }
 
 
-export const delActivity =(id) =>{
-    return async (dispatch) =>{
-        try {
-          // await axios.delete(endpoint)
-          return dispatch({
-            type: DEL_ACT,
-            payload: id,
-      });
-        } catch (error) {
-          console.log(error)
-        }
+// export const delActivity =(id) =>{
+//     return async (dispatch) =>{
+//         try {
+//           return dispatch({
+//             type: DEL_ACT,
+//             payload: id,
+//       });
+//         } catch (error) {
+//           console.log(error)
+//         }
   
-      }
-}
+//       }
+// }
   
 
 export const createActivity = (activity)=>{

@@ -1,4 +1,4 @@
-import { GET_COU, DEL_COU,DEL_ACT, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY, GET_DET } from "./action_types";
+import { GET_COU, DEL_COU, DEL_ACT, CRE_ACT, GET_ACT, ADD_COU, BY_CONT, ORDER_BY, GET_DET } from "./action_types";
 
 const initialState = {
     base:[],
@@ -41,12 +41,12 @@ const reducer = (state = initialState, action)=>{
                 paises: paisesFilter,
                 primeros: filterFirst
             }
-        case DEL_ACT:
-            let actFilter = state.activities.filter(ac => ac.id !== action.payload)
-            return{
-                ...state,
-                activities: actFilter
-            }
+        // case DEL_ACT:
+        //     let actFilter = state.activities.filter(ac => ac.id !== action.payload)
+        //     return{
+        //         ...state,
+        //         activities: actFilter
+        //     }
         case CRE_ACT:
             return {
                 ...state,

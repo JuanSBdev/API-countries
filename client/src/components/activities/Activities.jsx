@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import styles from './Activities.module.css'
+// import { delActivity } from '../../redux/actions'
 
 import { Link } from 'react-router-dom'
 
@@ -17,6 +18,9 @@ export default function Activities(props) {
     },[])
     let theActivities = useSelector(state => state.activities)
     
+    // let deleteActivity = (index)=>{
+    //     dispatch(delActivity(index))
+    // }
     
 
         
@@ -46,8 +50,8 @@ export default function Activities(props) {
         { theActivities && theActivities.length > 0 ?(
             
             theActivities.map((act, index)=>(
-                
                 <div key={index} className={styles.div_act}>
+                    {/* <button onClick={deleteActivity(index)}>X</button> */}
              <h2> {act.nombre}</h2>
             <p>Dificulty: {act.dificultad}</p>
             <p>Duration: {act.duracion}</p>
