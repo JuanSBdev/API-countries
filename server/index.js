@@ -5,6 +5,6 @@ const PORT = 3001;
 conn.sync({ force: true })
 .then(() => {
   server.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`app developed by juansb@gmail.com ${PORT}`);
   })
 }).catch(error => console.error(error))
