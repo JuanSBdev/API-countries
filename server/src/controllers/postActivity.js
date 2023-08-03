@@ -18,7 +18,18 @@ const postActivity = async (req, res)=>{
             duracion: time,
             temporada: season
         }
-        let nuevaActividad = await Activity.create(actividad)
+        // let existente = await Activity.findOrCreate({where:{
+        //     nombre 
+        // }})
+        let [nuevaActividad, created] = await Activity.findOrCreate( {where:{
+            nombre: name
+        }, defaults: actividad,
+
+
+    })
+    if(!created){
+        throw new Error('already exists')
+    }
             
         let countriesFound = await Country.findAll({
             where:{

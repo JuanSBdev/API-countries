@@ -81,6 +81,7 @@ export const createActivity = (activity)=>{
             alert('cargada')
 
         } catch (error) {
+            alert(error.response.data.message)
             console.log(error)
         }        
     }
@@ -134,9 +135,7 @@ export const getDetail = (id)=>{
              try {
                 let response = await axios(endpoint)
                 let data = response.data
-                // console.log(id)
-                // console.log(data)
-
+          
             return  dispatch({
                 type: GET_DET,
                 payload: data
