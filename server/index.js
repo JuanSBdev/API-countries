@@ -7,4 +7,4 @@ conn.sync({ force: true })
   server.listen(PORT, () => {
     console.log(`app developed by juansb@gmail.com ${PORT}`);
   })
-}).catch(error => console.error(error))
+}).catch(error => console.error(error + 'SRVER ERR'))
