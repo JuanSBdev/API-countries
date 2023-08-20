@@ -41,7 +41,7 @@ export default function Detail() {
           <p>{`Area: ${detailed.area} km2`}</p>
           <p>{`Population: ${detailed.poblacion}`}</p>
           <p>activities:</p>
-          <p className={styles.activities}>  {activity.length > 0 ? activity.join(', ') : (<Link  to={'/form'} className={styles.link_add}>Add Activity</Link>)}</p>
+          <p className={styles.activities}>  {activity.length > 0 ? activity.join(', ') : (<Link  to={'/activity/form'} className={styles.link_add}>Add Activity</Link>)}</p>
         </div>
       </div>
 
