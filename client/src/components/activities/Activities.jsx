@@ -12,7 +12,6 @@ export default function Activities(props) {
     let [loading, setLoading] = useState(true)
     
     useEffect(()=>{
-        console.log(theActivities)
         setLoading(false)
         
     },[])

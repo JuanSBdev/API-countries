@@ -18,9 +18,7 @@ const postActivity = async (req, res)=>{
             duracion: time,
             temporada: season
         }
-        // let existente = await Activity.findOrCreate({where:{
-        //     nombre 
-        // }})
+       
         let [nuevaActividad, created] = await Activity.findOrCreate( {where:{
             nombre: name
         }, defaults: actividad,

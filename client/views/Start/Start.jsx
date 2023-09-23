@@ -8,10 +8,6 @@ import { getCountries } from '../../src/redux/actions'
 export default function Start() {
   let dispatch = useDispatch()
   
-  useEffect(()=>{
-    console.log('semanda')
-  }, [])
-  
   return (
     <div className={styles.wrapper}>
         <div className={styles.separador}>
