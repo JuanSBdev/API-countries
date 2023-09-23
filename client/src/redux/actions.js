@@ -78,11 +78,10 @@ export const createActivity = (activity)=>{
                 type: CRE_ACT,
                 payload: data
             })
-            alert('cargada')
+            alert('activity created')
 
         } catch (error) {
             alert(error.response.data.message)
-            console.log(error)
         }        
     }
 }
